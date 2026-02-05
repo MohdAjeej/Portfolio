@@ -5,27 +5,31 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+}
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
+        if (hamburger) hamburger.classList.remove('active');
     });
 });
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    if (navbar) {
+        if (window.scrollY > 100) {
+            navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+            navbar.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.7)';
+        } else {
+            navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+        }
     }
 });
 
@@ -76,13 +80,48 @@ window.addEventListener('scroll', () => {
 const style = document.createElement('style');
 style.textContent = `
     .nav-link.active {
-        color: var(--primary-color);
+        color: var(--text-primary);
     }
     .nav-link.active::after {
         width: 100%;
     }
 `;
 document.head.appendChild(style);
+
+// =====================================
+// Skills Tab Switching
+// =====================================
+const skillTabs = document.querySelectorAll('.skill-tab');
+const skillGrids = document.querySelectorAll('.skills-grid');
+
+if (skillTabs.length > 0) {
+    skillTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const category = tab.getAttribute('data-category');
+            
+            // Remove active class from all tabs
+            skillTabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Hide all skill grids
+            skillGrids.forEach(grid => {
+                grid.classList.remove('active');
+            });
+            
+            // Show selected category grid
+            const selectedGrid = document.querySelector(`.skills-grid[data-category="${category}"]`);
+            if (selectedGrid) {
+                setTimeout(() => {
+                    selectedGrid.classList.add('active');
+                    // Animate skill bars for visible skills
+                    animateVisibleSkillBars(selectedGrid);
+                }, 50);
+            }
+        });
+    });
+}
 
 // =====================================
 // Animated Skill Bars
@@ -95,53 +134,59 @@ const observerOptions = {
 const animateSkillBars = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const skillProgress = entry.target;
-            const progress = skillProgress.getAttribute('data-progress');
-            skillProgress.style.width = `${progress}%`;
-            
-            // Add percentage display (optional)
-            const skillName = skillProgress.closest('.skill-item').querySelector('.skill-name');
-            if (!skillProgress.nextElementSibling || 
-                !skillProgress.nextElementSibling.classList.contains('skill-percentage')) {
-                const percentage = document.createElement('span');
-                percentage.textContent = `${progress}%`;
-                percentage.classList.add('skill-percentage');
-                percentage.style.cssText = `
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    font-size: 0.9rem;
-                    color: var(--text-color);
-                    font-weight: 600;
-                `;
-                skillName.style.position = 'relative';
-                skillName.parentElement.style.position = 'relative';
-                skillName.parentElement.appendChild(percentage);
+            const skillFill = entry.target.querySelector('.skill-fill');
+            const skillBar = entry.target;
+            if (skillFill && skillBar) {
+                const progress = skillBar.getAttribute('data-progress');
+                skillFill.style.width = `${progress}%`;
+                observer.unobserve(skillBar);
             }
-            
-            observer.unobserve(skillProgress);
+        }
+    });
+};
+
+const animateVisibleSkillBars = (container) => {
+    const skillBars = container.querySelectorAll('.skill-bar');
+    skillBars.forEach(bar => {
+        const skillFill = bar.querySelector('.skill-fill');
+        if (skillFill) {
+            const progress = bar.getAttribute('data-progress');
+            skillFill.style.width = '0';
+            setTimeout(() => {
+                skillFill.style.width = `${progress}%`;
+            }, 100);
         }
     });
 };
 
 const skillObserver = new IntersectionObserver(animateSkillBars, observerOptions);
 
-document.querySelectorAll('.skill-progress').forEach(progress => {
-    skillObserver.observe(progress);
+document.querySelectorAll('.skill-bar').forEach(bar => {
+    skillObserver.observe(bar);
 });
+
+// Initialize first tab's skill bars
+if (skillGrids.length > 0) {
+    const activeGrid = document.querySelector('.skills-grid.active');
+    if (activeGrid) {
+        animateVisibleSkillBars(activeGrid);
+    }
+}
 
 // =====================================
 // Fade-in Animation on Scroll
 // =====================================
-const fadeInElements = document.querySelectorAll('.stat-item, .timeline-item, .project-card, .achievement-card');
+const fadeInElements = document.querySelectorAll('.stat-card, .spec-card, .project-item, .exp-item, .skill-item');
 
 const fadeInOnScroll = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '0';
-            entry.target.style.transition = 'opacity 0.8s ease';
+            entry.target.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            entry.target.style.transform = 'translateY(20px)';
             setTimeout(() => {
                 entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }, 100);
             observer.unobserve(entry.target);
         }
@@ -159,17 +204,6 @@ fadeInElements.forEach(element => {
 });
 
 // =====================================
-// Typing Animation Enhancement
-// =====================================
-const typingText = document.querySelector('.typing-text');
-if (typingText) {
-    // Already animated via CSS, but we can enhance it
-    setTimeout(() => {
-        typingText.style.borderRight = 'none';
-    }, 3000);
-}
-
-// =====================================
 // Contact Form Handling
 // =====================================
 const contactForm = document.getElementById('contactForm');
@@ -182,15 +216,17 @@ if (contactForm) {
         const name = document.getElementById('user_name').value.trim();
         const email = document.getElementById('user_email').value.trim();
         const subject = document.getElementById('subject').value.trim();
+        const phone = document.getElementById('phone').value.trim();
         const message = document.getElementById('message').value.trim();
         
         // Validate form
         if (!name || !email || !subject || !message) {
+            alert('Please fill in all required fields.');
             return;
         }
         
         // Create mailto link with form data
-        const mailtoLink = `mailto:azizpathan882002@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+        const mailtoLink = `mailto:azizpathan882002@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`)}`;
         
         // Open email client
         window.location.href = mailtoLink;
@@ -214,13 +250,13 @@ backToTop.style.cssText = `
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #2563EB, #1E40AF);
     color: white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -247,34 +283,6 @@ backToTop.addEventListener('click', () => {
 });
 
 // =====================================
-// Particle Effect Enhancement
-// =====================================
-const createFloatingShape = () => {
-    const shape = document.createElement('div');
-    const size = Math.random() * 20 + 10;
-    const colors = ['rgba(255,255,255,0.1)', 'rgba(255,255,255,0.05)'];
-    
-    shape.style.cssText = `
-        position: absolute;
-        width: ${size}px;
-        height: ${size}px;
-        background: ${colors[Math.floor(Math.random() * colors.length)]};
-        border-radius: ${Math.random() > 0.5 ? '50%' : '10%'};
-        left: ${Math.random() * 100}%;
-        animation: float ${Math.random() * 10 + 15}s infinite ease-in-out;
-    `;
-    
-    document.querySelector('.home').appendChild(shape);
-    
-    setTimeout(() => {
-        shape.remove();
-    }, 20000);
-};
-
-// Create floating shapes periodically
-setInterval(createFloatingShape, 3000);
-
-// =====================================
 // Project Image Lazy Loading
 // =====================================
 if ('IntersectionObserver' in window) {
@@ -297,32 +305,15 @@ if ('IntersectionObserver' in window) {
 }
 
 // =====================================
-// Dynamic Resume Download
-// =====================================
-document.querySelectorAll('.btn-primary').forEach(btn => {
-    if (btn.textContent.includes('Resume')) {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Create a temporary link to download
-            const link = document.createElement('a');
-            link.href = btn.getAttribute('href');
-            link.download = 'Mohd_Ajeej_Resume.pdf';
-            link.click();
-        });
-    }
-});
-
-// =====================================
 // Console Welcome Message
 // =====================================
-console.log('%c👋 Welcome to My Portfolio!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-console.log('%cLooking for the code? Check out the repository on GitHub!', 'font-size: 14px; color: #6b7280;');
+console.log('%c👋 Welcome to My Portfolio!', 'font-size: 20px; font-weight: bold; color: #3B82F6;');
+console.log('%cLooking for the code? Check out the repository on GitHub!', 'font-size: 14px; color: #CBD5E1;');
 
 // =====================================
 // Page Load Complete
 // =====================================
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
-    console.log('%c✨ Portfolio Loaded Successfully!', 'font-size: 16px; color: #10b981; font-weight: bold;');
+    console.log('%c✨ Portfolio Loaded Successfully!', 'font-size: 16px; color: #3B82F6; font-weight: bold;');
 });
-

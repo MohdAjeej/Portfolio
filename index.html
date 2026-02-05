@@ -6,22 +6,23 @@
     <title>Mohd Ajeej | Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-text">MA</span>
+                <span class="logo-text">Mohd Ajeej</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#specialization" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Portfolio</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <a href="#contact" class="btn-hire">Hire Me</a>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -30,17 +31,25 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home">
-        <div class="home-content">
-            <div class="home-text">
-                <h1 class="typing-text">Hi, I'm <span class="highlight">Mohd Ajeej</span></h1>
-                <h2 class="tagline">Full-Stack Developer | Problem Solver | Tech Explorer</h2>
-                <p class="description">Innovating with Code | AI & Full-Stack Developer</p>
-                <div class="home-buttons">
-                    <a href="Photo portfolio.png" class="btn btn-primary">Download Resume</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="Photo portfolio.png" alt="Mohd Ajeej" class="profile-image">
+                        <div class="image-glow"></div>
+                    </div>
                 </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Hi, I am <span class="highlight">Mohd Ajeej</span></h1>
+                    <h2 class="hero-subtitle">Full-Stack Developer + AI Engineer</h2>
+                    <p class="hero-description">
+                        I'm an energetic and innovative final-year Computer Science student with a solid foundation in 
+                        full-stack development and competitive programming. I specialize in building optimized web and 
+                        mobile solutions focused on seamless user experiences and efficient API integrations.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">Hire Me</a>
                 <div class="social-links">
                     <a href="mailto:azizpathan882002@gmail.com" target="_blank" class="social-icon">
                         <i class="fas fa-envelope"></i>
@@ -52,51 +61,223 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
-            </div>
-            <div class="home-image">
-                <div class="image-wrapper">
-                    <img src="Photo portfolio.png" alt="Mohd Ajeej" class="profile-image">
-                    <div class="image-glow"></div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
+                    <h2 class="section-title">Achievements in my professional life.</h2>
                     <p>
-                        I'm an energetic and innovative final-year Computer Science student with a solid foundation in 
-                        full-stack development and competitive programming. I specialize in building optimized web and 
-                        mobile solutions focused on seamless user experiences and efficient API integrations.
+                        I am a proactive and driven Computer Science student with hands-on experience in full-stack development 
+                        and competitive programming. I have developed and optimized multiple web and mobile applications, focusing on 
+                        clean architecture, efficient API integration, and smooth user experiences. These projects have strengthened 
+                        my ability to translate requirements into reliable, scalable technical solutions.
                     </p>
                     <p>
-                        Passionate about leveraging emerging technologies to drive digital transformation, especially in 
-                        digital publishing and mobile applications. Known for a strong problem-solving mindset, adaptability, 
-                        and a drive to continuously learn and innovate in dynamic tech environments.
+                        I am deeply interested in leveraging emerging technologies to support digital transformation, particularly 
+                        within digital publishing and mobile-first platforms. Known for my analytical thinking and adaptability, I 
+                        consistently take initiative to learn new tools and improve existing systems. I perform well in fast-paced 
+                        environments and remain committed to continuous growth, innovation, and delivering impactful results.
                     </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <i class="fas fa-code"></i>
-                            <h3>100+</h3>
-                            <p>Code Projects</p>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <div class="visual-content">
+                            <h4>Smart Development</h4>
+                            <p>Full-Stack Solutions</p>
                         </div>
-                        <div class="stat-item">
-                            <i class="fas fa-trophy"></i>
-                            <h3>25</h3>
-                            <p>Top Position</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialization Section -->
+    <section id="specialization" class="specialization">
+        <div class="container">
+            <h2 class="section-title">My Specialization</h2>
+            <div class="specialization-grid">
+                <div class="spec-card">
+                    <div class="spec-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web & App Design</h3>
+                    <p>Creating beautiful and functional web and mobile interfaces with modern design principles and user-centered approach.</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing intuitive user experiences and engaging interfaces that enhance user satisfaction and drive conversions.</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, scalable web applications using modern frameworks and best practices for optimal performance.</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>App Development</h3>
+                    <p>Developing cross-platform mobile applications with focus on performance, usability, and seamless integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Recent Projects</h2>
+            <div class="projects-list">
+                <!-- Panna.ai Project -->
+                <div class="project-item">
+                    <div class="project-info">
+                        <h3>Panna.ai</h3>
+                        <p class="project-tag">AI-Powered Note-Taking Application</p>
+                        <p class="project-description">
+                            A beautiful, minimal note-taking app with AI-powered features and browser extension. Capture notes from anywhere 
+                            and organize them seamlessly. Features smart note organization, AI-powered suggestions, browser extension for 
+                            quick capture, and seamless synchronization across devices. Completely free and open source.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Browser Extension</span>
+                            <span class="tech-tag">Firebase</span>
                         </div>
-                        <div class="stat-item">
-                            <i class="fas fa-certificate"></i>
-                            <h3>4+</h3>
-                            <p>Certifications</p>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-outline">View Details</a>
+                            <a href="https://panna-ai-bice.vercel.app/" target="_blank" class="btn btn-primary">Live Demo</a>
                         </div>
+                    </div>
+                    <div class="project-images">
+                        <div class="project-img-wrapper">
+                            <img src="photo4.png" alt="Panna.ai - Smart Notes Made Simple">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Counsellor Project -->
+                <div class="project-item">
+                    <div class="project-info">
+                        <h3>AI Counsellor</h3>
+                        <p class="project-tag">AI-Powered Student Counselling Platform for Abroad Studies</p>
+                        <p class="project-description">
+                            An intelligent AI-powered counselling platform designed to help students navigate the process of studying abroad. 
+                            Provides personalized guidance on university selection, visa procedures, scholarship opportunities, and country-specific 
+                            requirements. Features natural language processing for interactive counselling sessions and comprehensive database of 
+                            international education resources.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Dialogflow</span>
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-outline">View Details</a>
+                            <a href="https://ai-counsellor-delta.vercel.app/" target="_blank" class="btn btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <div class="project-img-wrapper">
+                            <img src="photo5.png" alt="AI Counsellor - Build Your Study-Abroad Journey">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E2EE Chat Project -->
+                <div class="project-item">
+                    <div class="project-info">
+                        <h3>E2EE Chat</h3>
+                        <p class="project-tag">Real-Time Chat Application with End-to-End Encryption</p>
+                        <p class="project-description">
+                            A secure real-time messaging application with end-to-end encryption, ensuring complete privacy. 
+                            Your conversations are encrypted so only you and your recipient can read them. Not even we can see your messages.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">E2EE</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/MohdAjeej/Real-Time-Chat-Application-with-End-to-End-Encryption" target="_blank" class="btn btn-outline">View Details</a>
+                            <a href="https://github.com/MohdAjeej/Real-Time-Chat-Application-with-End-to-End-Encryption.git" target="_blank" class="btn btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <div class="project-img-wrapper">
+                            <img src="photo 2 (2).jpg" alt="E2EE Chat Dashboard">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Education & Work Experience</h2>
+            <div class="experience-grid">
+                <div class="exp-column">
+                    <h3 class="exp-title">Education</h3>
+                    <div class="exp-item">
+                        <h4>Bachelors</h4>
+                        <span class="exp-date">2022 - 2026</span>
+                        <p class="exp-location">Galgotias University</p>
+                        <p class="exp-desc">BTech Computer Science</p>
+                    </div>
+                </div>
+                <div class="exp-column">
+                    <h3 class="exp-title">Internships</h3>
+                    <div class="exp-item">
+                        <h4>Java Full Stack Developer</h4>
+                        <span class="exp-date">July 2025 - Oct 2025</span>
+                        <p class="exp-location">Wipro</p>
+                        <p class="exp-desc">Full-stack development using Java, Spring Framework, and modern web technologies</p>
+                    </div>
+                    <div class="exp-item">
+                        <h4>IBM AI Virtual Internship</h4>
+                        <span class="exp-date">Nov 2023 - Jan 2024</span>
+                        <p class="exp-location">IBM</p>
+                        <p class="exp-desc">AI Fundamentals, Machine Learning, Chatbot Development</p>
+                        </div>
+                    <div class="exp-item">
+                        <h4>Java & SQL Virtual Internship</h4>
+                        <span class="exp-date">Aug 2022 - Nov 2022</span>
+                        <p class="exp-location">Oracle</p>
+                        <p class="exp-desc">Java Foundations, Database Programming, Data Structures</p>
+                    </div>
+                </div>
+                <div class="exp-column">
+                    <h3 class="exp-title">Achievements</h3>
+                    <div class="exp-item">
+                        <h4>Smart India Hackathon 2024</h4>
+                        <span class="exp-date">2024</span>
+                        <p class="exp-location">National Level</p>
+                        <p class="exp-desc">Participated in India's largest hackathon</p>
+                        </div>
+                    <div class="exp-item">
+                        <h4>Ideathon'23 - Top 25</h4>
+                        <span class="exp-date">2023</span>
+                        <p class="exp-location">University Level</p>
+                        <p class="exp-desc">Secured Top 25 among 200+ participants</p>
                     </div>
                 </div>
             </div>
@@ -106,221 +287,323 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-content">
-                <div class="skills-category">
-                    <h3><i class="fas fa-code"></i> Programming & Development</h3>
-                    <div class="skill-bar-container">
-                        <div class="skill-item">
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">React.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Node.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">MySQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">TypeScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
+            <h2 class="section-title">My Skills</h2>
+            <p class="skills-intro">Proficient in modern web technologies and development tools</p>
+            
+            <!-- Skills Tabs -->
+            <div class="skills-tabs">
+                <button class="skill-tab active" data-category="languages">Languages</button>
+                <button class="skill-tab" data-category="frontend">Frontend</button>
+                <button class="skill-tab" data-category="backend">Backend</button>
+                <button class="skill-tab" data-category="databases">Databases</button>
+                <button class="skill-tab" data-category="devops">Cloud & DevOps</button>
+            </div>
+
+            <!-- Languages Skills -->
+            <div class="skills-grid active" data-category="languages">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="90">
+                            <div class="skill-fill"></div>
                         </div>
                     </div>
+                    <span class="skill-percentage">90%</span>
+                    <h4>JavaScript</h4>
                 </div>
-                <div class="skills-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Git & GitHub</span>
-                        <span class="tag">Agile & Scrum</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">Dialogflow</span>
-                        <span class="tag">Bootstrap</span>
-                        <span class="tag">OOPS</span>
-                        <span class="tag">Data Structures</span>
-                        <span class="tag">Algorithm Design</span>
-                        <span class="tag">Competitive Programming</span>
-                        <span class="tag">Software Testing</span>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
                     </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="85">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                    <h4>Java</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="80">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                    <h4>Python</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="75">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                    <h4>TypeScript</h4>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Internships Section -->
-    <section id="internships" class="internships">
-        <div class="container">
-            <h2 class="section-title">Internships & Training</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fab fa-ibm"></i>
+            <!-- Frontend Skills -->
+            <div class="skills-grid" data-category="frontend">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
                     </div>
-                    <div class="timeline-content">
-                        <h3>IBM AI Virtual Internship</h3>
-                        <span class="timeline-date">Nov 2023 - Jan 2024</span>
-                        <ul>
-                            <li>Completed IBM Artificial Intelligence Fundamentals</li>
-                            <li>Gained expertise in machine learning models and AI-driven automation</li>
-                            <li>Developed hands-on projects with chatbot development and predictive analytics</li>
-                            <li>Explored real-world AI applications for business intelligence</li>
-                        </ul>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="90">
+                            <div class="skill-fill"></div>
+                        </div>
                     </div>
+                    <span class="skill-percentage">90%</span>
+                    <h4>HTML5</h4>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fab fa-oracle"></i>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
                     </div>
-                    <div class="timeline-content">
-                        <h3>Java & SQL Virtual Internship</h3>
-                        <span class="timeline-date">Aug 2022 - Nov 2022</span>
-                        <ul>
-                            <li>Completed Java Foundations with object-oriented programming</li>
-                            <li>Mastered data structures and algorithmic problem-solving</li>
-                            <li>Gained expertise in query optimization and data security</li>
-                            <li>Developed efficient database design skills</li>
-                        </ul>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="88">
+                            <div class="skill-fill"></div>
+                        </div>
                     </div>
+                    <span class="skill-percentage">88%</span>
+                    <h4>CSS3</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="85">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                    <h4>React</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-bootstrap"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="85">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                    <h4>Bootstrap</h4>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="photo 2 (2).jpg" alt="E2EE Chat - Real-Time Chat Application">
-                        <div class="project-overlay">
-                            <a href="https://github.com/MohdAjeej/Real-Time-Chat-Application-with-End-to-End-Encryption" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+            <!-- Backend Skills -->
+            <div class="skills-grid" data-category="backend">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="80">
+                            <div class="skill-fill"></div>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>E2EE Chat</h3>
-                        <span class="project-tag">Real-Time Chat Application with End-to-End Encryption</span>
-                        <p>A secure real-time messaging application with end-to-end encryption, ensuring complete privacy. Your conversations are encrypted so only you and your recipient can read them. Not even we can see your messages.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React.js</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Socket.io</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">E2EE</span>
-                            <span class="tech-tag">JWT</span>
-                        </div>
-                        <ul class="project-features">
-                            <li>100% end-to-end encrypted messaging</li>
-                            <li>Zero-knowledge architecture for maximum privacy</li>
-                            <li>Real-time chat with instant message delivery</li>
-                            <li>Secure authentication and user management</li>
-                        </ul>
-                    </div>
+                    <span class="skill-percentage">80%</span>
+                    <h4>Node.js</h4>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="Photo3.png" alt="Quiz Website">
-                        <div class="project-overlay">
-                            <a href="https://github.com/MohdAjeej/Quiz-Website.git" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-node"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="82">
+                            <div class="skill-fill"></div>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Quiz Website</h3>
-                        <span class="project-tag">Online Quiz Portal</span>
-                        <p>An interactive quiz portal with user registration, login, timer functionality, and score calculations. Saves and tracks all student responses and participation records.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Authentication</span>
+                    <span class="skill-percentage">82%</span>
+                    <h4>Express.js</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="85">
+                            <div class="skill-fill"></div>
                         </div>
-                        <ul class="project-features">
-                            <li>User registration and login system</li>
-                            <li>Timer-based quiz functionality</li>
-                            <li>Automatic score calculation</li>
-                            <li>Student response tracking and leaderboard</li>
-                        </ul>
                     </div>
+                    <span class="skill-percentage">85%</span>
+                    <h4>Java</h4>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements & Certifications</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Smart India Hackathon 2024</h3>
-                    <p>Participated in one of India's largest hackathons, solving real-world problems with innovative tech solutions.</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <h3>Ideathon'23 - Top 25</h3>
-                    <p>Secured Top 25 position among 200+ participants by proposing an innovative solution.</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Oracle Certifications</h3>
-                    <p>Java Foundations & Database Programming with SQL by Oracle Academy.</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
+                <div class="skill-item">
+                    <div class="skill-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Full Stack Java Web Developer</h3>
-                    <p>Certified by AICTE with comprehensive knowledge of full-stack development.</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-network-wired"></i>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="88">
+                            <div class="skill-fill"></div>
+                        </div>
                     </div>
-                    <h3>Cisco Network Certification</h3>
-                    <p>Introduction to Packet Tracer by Cisco for network fundamentals.</p>
+                    <span class="skill-percentage">88%</span>
+                    <h4>Data Structures</h4>
                 </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-project-diagram"></i>
                     </div>
-                    <h3>BTech Computer Science</h3>
-                    <p>CGPA: 7.96 | Galgotias University (2022-2026)</p>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="85">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                    <h4>Algorithms</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="75">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                    <h4>Machine Learning</h4>
+                </div>
+            </div>
+
+            <!-- Databases Skills -->
+            <div class="skills-grid" data-category="databases">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="85">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                    <h4>MySQL</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="80">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                    <h4>MongoDB</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="82">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">82%</span>
+                    <h4>PostgreSQL</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="80">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                    <h4>Supabase</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-firebase"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="78">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">78%</span>
+                    <h4>Firebase</h4>
+                </div>
+            </div>
+
+            <!-- Cloud & DevOps Skills -->
+            <div class="skills-grid" data-category="devops">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="80">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                    <h4>Docker</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="82">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">82%</span>
+                    <h4>CI & CD</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="85">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                    <h4>Git & GitHub</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="85">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                    <h4>Agile & Scrum</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar" data-progress="88">
+                            <div class="skill-fill"></div>
+                        </div>
+                    </div>
+                    <span class="skill-percentage">88%</span>
+                    <h4>SDLC</h4>
                 </div>
             </div>
         </div>
@@ -329,33 +612,34 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's Connect!</h3>
+                    <h2 class="section-title">Let's work together!</h2>
                     <p>I'm open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
+                            <h4>Email Address</h4>
                                 <a href="mailto:azizpathan882002@gmail.com">azizpathan882002@gmail.com</a>
-                            </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
+                            <h4>Phone Number</h4>
                                 <a href="tel:+919336242280">+91 9336242280</a>
-                            </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
+                            <h4>Office Address</h4>
                                 <p>Greater Noida, India</p>
-                            </div>
                         </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="mailto:azizpathan882002@gmail.com" target="_blank" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
@@ -366,10 +650,13 @@
                         <input type="email" name="user_email" id="user_email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        <input type="text" name="subject" id="subject" placeholder="Your Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea rows="6" name="message" id="message" placeholder="Your Message" required></textarea>
+                        <input type="tel" name="phone" id="phone" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="6" name="message" id="message" placeholder="Message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
                 </form>
@@ -380,12 +667,78 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Mohd Ajeej. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>Mohd Ajeej</h3>
+                        <p>Full-Stack Developer & AI Engineer</p>
+                        <p class="footer-description">
+                            Passionate about building innovative web solutions and leveraging AI technologies 
+                            to create impactful digital experiences.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#specialization">Services</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#specialization">Web Development</a></li>
+                        <li><a href="#specialization">App Development</a></li>
+                        <li><a href="#specialization">UI/UX Design</a></li>
+                        <li><a href="#specialization">Full-Stack Solutions</a></li>
+                        <li><a href="#projects">AI Integration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:azizpathan882002@gmail.com">azizpathan882002@gmail.com</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919336242280">+91 9336242280</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Greater Noida, India</span>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="mailto:azizpathan882002@gmail.com" target="_blank" class="footer-social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="footer-social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="footer-social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 All Rights Reserved by Mohd Ajeej</p>
             <p>Built with <i class="fas fa-heart"></i> and modern web technologies</p>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
